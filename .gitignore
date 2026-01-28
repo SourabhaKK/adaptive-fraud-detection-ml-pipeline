@@ -7,6 +7,9 @@ __pycache__/
 env/
 venv/
 ENV/
+env.bak/
+venv.bak/
+.venv/
 build/
 develop-eggs/
 dist/
@@ -19,9 +22,12 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # IDE
 .vscode/
@@ -29,24 +35,97 @@ wheels/
 *.swp
 *.swo
 *~
+*.code-workspace
 
 # Testing
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 .tox/
+.nox/
+.hypothesis/
+coverage.xml
+*.cover
+.cache
+nosetests.xml
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*-checkpoint.ipynb
 
 # Models and data
 models/
 data/
+datasets/
 *.pkl
+*.pickle
 *.joblib
 *.h5
+*.hdf5
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.pb
+*.tflite
+
+# Logs and outputs
+logs/
+*.log
+*.out
+*.err
+outputs/
+runs/
+checkpoints/
+
+# Experiment tracking
+mlruns/
+.mlflow/
+wandb/
+.neptune/
+tensorboard/
+lightning_logs/
 
 # Environment
 .env
 .env.local
+.env.*.local
+*.env
 
 # OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~.nib
+
+# Documentation builds
+docs/_build/
+site/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
