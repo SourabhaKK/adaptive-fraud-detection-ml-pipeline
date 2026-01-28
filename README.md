@@ -1,2 +1,17 @@
-# adaptive-fraud-detection-ml-pipeline
-Production-ready machine learning pipeline for adaptive transaction fraud detection, featuring leakage-safe training, cost-sensitive decisioning, drift monitoring, and API-based inference.
+# Adaptive Fraud Detection ML Pipeline
+
+## Overview
+
+## Features
+
+## Architecture
+
+## Installation
+
+## Usage
+
+## Testing
+
+## Project Structure
+
+## License
