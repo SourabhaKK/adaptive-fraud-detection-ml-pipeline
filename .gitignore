@@ -29,6 +29,10 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# Model artifacts
+models/
+*.joblib
+
 # IDE
 .vscode/
 .idea/
