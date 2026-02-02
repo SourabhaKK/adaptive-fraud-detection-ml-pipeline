@@ -287,18 +287,30 @@ python run_pipeline.py
 - Evaluates on train and validation sets (ROC-AUC, precision, recall)
 - Saves model artifacts to `models/` directory
 
-### 3. Run Tests
+### 3.## Running Tests
 
 ```bash
-# All tests
+# Run all tests (works on all platforms)
 pytest
 
-# With coverage
+# Run with verbose output
+pytest -v
+
+# Run specific test file
+pytest tests/test_preprocessing.py -v
+
+# Run with coverage report
 pytest --cov=src --cov-report=term-missing
 
-# Specific component
-pytest tests/test_preprocessing.py -v
+# Run with HTML coverage report
+pytest --cov=src --cov-report=html
+# Open htmlcov/index.html in browser to view
 ```
+
+**Test Summary:**
+- 36 tests across 4 components
+- Leakage prevention (6), Data splitting (8), Decisions (10), API validation (12)
+- All tests pass without manual PYTHONPATH setup
 
 ### 4. Monitor Drift
 
