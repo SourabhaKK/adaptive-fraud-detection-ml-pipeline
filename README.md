@@ -2,7 +2,30 @@
 
 A production-oriented fraud detection system demonstrating Test-Driven Development (TDD) for critical components, leakage-safe preprocessing, and deterministic ML workflows.
 
----
+## Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/SourabhaKK/adaptive-fraud-detection-ml-pipeline.git
+cd adaptive-fraud-detection-ml-pipeline
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run end-to-end pipeline (< 1 minute)
+python run_pipeline.py
+
+# Run tests
+pytest
+```
+
+**What happens:**
+- Generates 10,000 synthetic transactions
+- Trains fraud detection model (ROC-AUC: ~0.97)
+- Saves model artifacts to `models/` directory
+- All 36 tests pass
+
+
 
 ## Problem Statement
 
