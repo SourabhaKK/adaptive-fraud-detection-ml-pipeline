@@ -93,6 +93,11 @@ This ML pipeline enforces correctness where it matters most:
 └─────────────────────────────────────────────────────────────┘
 ```
 
+> **Note on the API layer**: only the Pydantic request/response schemas and their
+> validation rules are implemented and tested (`src/inference_api/schemas.py`,
+> `tests/test_api_validation.py`). `src/inference_api/app.py` is a placeholder —
+> no FastAPI endpoints are wired up yet. See [Design Trade-offs & Limitations](#design-trade-offs--limitations) below.
+
 ---
 
 ## Machine Learning Approach

@@ -119,6 +119,9 @@ Desktop.ini
 docs/_build/
 site/
 
+# graphify knowledge graph build output
+graphify-out/
+
 # mypy
 .mypy_cache/
 .dmypy.json
