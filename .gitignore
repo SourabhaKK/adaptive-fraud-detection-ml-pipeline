@@ -136,3 +136,13 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
