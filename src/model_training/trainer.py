@@ -50,9 +50,9 @@ class FraudModelTrainer:
         """
         self.random_seed = random_seed
         self.class_weight = class_weight
-        self.model = None
-        self.scaler = None
-        self.training_metadata = {}
+        self.model: Any = None
+        self.scaler: Any = None
+        self.training_metadata: Dict[str, Any] = {}
     
     def train(
         self, 
@@ -260,7 +260,9 @@ class FraudModelTrainer:
             class_weight=metadata.get('class_weight', 'balanced')
         )
         
-        # Load artifacts
+        # Load artifacts. joblib files are pickles and can run code when loaded,
+        # so only load a model directory this project wrote itself (see save());
+        # never one downloaded or received from someone else.
         trainer.model = joblib.load(model_file)
         trainer.scaler = joblib.load(scaler_file)
         trainer.training_metadata = metadata
