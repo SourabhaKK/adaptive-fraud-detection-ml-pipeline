@@ -10,7 +10,7 @@ Alert triggered when drift exceeds threshold.
 
 import numpy as np
 import pandas as pd
-from typing import Dict, Tuple
+from typing import Any, Dict, Optional, Tuple
 from datetime import datetime
 
 
@@ -35,7 +35,7 @@ class FeatureDriftMonitor:
                             (e.g., 0.3 = 30% change triggers alert)
         """
         self.drift_threshold = drift_threshold
-        self.training_stats = None
+        self.training_stats: Optional[Dict[str, Any]] = None
     
     def fit(self, X_train: pd.DataFrame):
         """

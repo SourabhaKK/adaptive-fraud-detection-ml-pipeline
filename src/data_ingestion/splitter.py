@@ -9,7 +9,7 @@ This module provides splitters that enforce:
 
 import numpy as np
 import pandas as pd
-from typing import Tuple
+from typing import Optional, Tuple
 from sklearn.model_selection import train_test_split
 
 
@@ -25,7 +25,7 @@ class DeterministicSplitter:
         val_size (float): Fraction of data for validation (0.0 to 1.0)
     """
     
-    def __init__(self, random_seed: int = None, val_size: float = 0.2):
+    def __init__(self, random_seed: Optional[int] = None, val_size: float = 0.2):
         """
         Initialize deterministic splitter.
         
@@ -133,7 +133,7 @@ class StratifiedSplitter:
         val_size (float): Fraction of data for validation (0.0 to 1.0)
     """
     
-    def __init__(self, target_column: str, random_seed: int = None, val_size: float = 0.2):
+    def __init__(self, target_column: str, random_seed: Optional[int] = None, val_size: float = 0.2):
         """
         Initialize stratified splitter.
         
